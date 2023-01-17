@@ -4,6 +4,7 @@ body {
 	box-sizing: border-box;
 	position: relative;
 	height: 100vh;
+	overflow-x: hidden;
 }
 h1 {
 	position: absolute;
@@ -11,22 +12,23 @@ h1 {
 	left: 50%;
 	margin: 0;
 	transform: translate(-50%, -50%);
-	font-size: 50px;
+	font-size: 70px;
 	color: rgba(0, 0, 0, 0.5);
-	border-bottom: 5px solid currentColor;
+	border-bottom: 7px solid currentColor;
 	text-transform: uppercase;
 	font-family: sans-serif;
 	letter-spacing: 6px;
+	font-weight: 900;
 }
 h1:before {
-	content: attr(data-text);
+	content: "Loading...";
 	position: absolute;
 	text-transform: uppercase;
 	left: 0;
 	top: 0;
 	width: 100%;
 	color: rgb(48, 0, 58);
-	border-bottom: 5px solid currentColor;
+	border-bottom: 7px solid currentColor;
 	animation: load 3s linear infinite;
 	overflow: hidden;
 }

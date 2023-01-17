@@ -11,6 +11,8 @@ ul {
 a {
 	text-decoration: none;
 }
+
+/* header */
 header {
 	padding: 20px;
 }
@@ -23,7 +25,7 @@ li {
 	display: inline-block;
 }
 
-li {
+nav li {
 	margin: 10px 20px;
 }
 nav a {
@@ -31,4 +33,100 @@ nav a {
 	text-transform: capitalize;
 	color: #333;
 	font-size: 30px;
+}
+nav a.active {
+	position: relative;
+	color: #b60606;
+}
+nav a.active:before {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	height: 4px;
+	width: 100%;
+	background-color: #b60606;
+	border-radius: 10px;
+	transition: width 0.5s ease;
+}
+
+.container {
+	max-width: 1475px;
+	width: 96%;
+	margin: 50px auto;
+}
+.projects {
+	background-color: cyan;
+}
+.section-title h3,
+.bullets {
+	display: inline-block;
+	vertical-align: middle;
+}
+.bullets span {
+	width: 20px;
+	height: 20px;
+	background-color: darkblue;
+	opacity: 0.5;
+	border-radius: 50%;
+	display: inline-block;
+}
+.section-title {
+	position: relative;
+	margin-bottom: 30px;
+}
+.bullets {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.bullets span.active {
+	opacity: 1;
+}
+
+.project-card {
+	max-width: 400px;
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	margin: 50px 20px 0;
+	position: relative;
+}
+.project-card img {
+	width: 100%;
+	border-radius: 15px;
+}
+.project-card:nth-child(2) {
+	margin-top: 0;
+}
+.project-card p {
+	position: absolute;
+	bottom: 10px;
+	left: 2%;
+	width: 96%;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 10px;
+	border-radius: 12px;
+}
+.see-more {
+	width: fit-content;
+	margin-left: auto;
+	background-color: red;
+}
+
+.card {
+	background-image: url("../images/4-slider.jpg");
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: red;
+	background-blend-mode: darken;
+	width: 100%;
+	height: 500px;
+	position: relative;
+}
+.card p {
+	position: absolute;
+	top: 50%;
+	background-color: rgba(255, 255, 255, 0.7);
 }

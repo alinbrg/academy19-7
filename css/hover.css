@@ -45,3 +45,53 @@ a::before {
 a:hover::before {
 	width: 100%;
 }
+
+nav a.active {
+	color: #b60606;
+}
+nav a.active:before {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	height: 4px;
+	width: 100%;
+	background-color: #b60606;
+	border-radius: 10px;
+	transition: width 0.5s ease;
+}
+.hidden {
+	display: none;
+}
+.card {
+	background-attachment: initial;
+	transition-property: all;
+	transition-delay: 1s;
+	transition-duration: 3s;
+	transition-timing-function: ease;
+}
+.card p {
+	position: static;
+	transition-property: color;
+	transition-delay: 2s;
+	transition-duration: 2s;
+	transition-timing-function: ease;
+}
+.card:hover {
+	background-color: transparent;
+	/* background-image: url("../images/2-slider-5.jpg"); */
+}
+.card:hover p {
+	color: red;
+}
+/* .card:hover .hidden {
+	display: block;
+	background-color: darkblue;
+} */
+
+.card p::before {
+	content: "";
+	width: 5px;
+	height: 50px;
+	background-color: #0f0131;
+	display: inline-block;
+}
