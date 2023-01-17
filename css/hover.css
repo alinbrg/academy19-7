@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+nav {
+	width: fit-content;
+	margin: auto;
+}
+ul,
+li {
+	display: inline-block;
+}
+header {
+	padding: 20px;
+}
+li {
+	margin: 10px 20px;
+}
+
+a {
+	position: relative;
+	text-transform: capitalize;
+	color: #333;
+	font-size: 30px;
+}
+a::before {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	height: 4px;
+	width: 0;
+	background-color: #0f0131;
+	border-radius: 10px;
+	transition: width 0.5s ease;
+}
+a:hover::before {
+	width: 100%;
+}
